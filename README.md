@@ -16,6 +16,6 @@ This is a simple HTML/JS/CSS website and I'd like to keep it that way, so no npm
 
 ## TODOs
 
-- [] Add borders to the honeycombs (I tried multiple times but I didn't manage) 
-- [] Add links to skills, wherever applicable
-- [] Allow skills to be filtered depending on specific tracks (developers, fun, community, etc)
+- [ ] Add borders to the honeycombs (I tried multiple times but I didn't manage) 
+- [ ] Add links to skills, wherever applicable
+- [ ] Allow skills to be filtered depending on specific tracks (developers, fun, community, etc)
