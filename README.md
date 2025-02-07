@@ -2,7 +2,7 @@
 
 # polkadot-skilltree
 
-Visual map of cool stuff you can do on Polkadot. 
+Visual map of cool stuff you can do on Polkadot. Check it out here: https://karimjedda.github.io/polkadot-skilltree/
 
 # Contributing 
 
