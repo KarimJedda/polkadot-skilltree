@@ -1,0 +1,178 @@
+- task: Submit a batch trasaction
+  type: user
+
+- task: Create a Polkadot wallet
+  type: user
+
+- task: Import a Polkadot wallet
+  type: user
+
+- task: Install a Polkadot browser extension
+  type: user
+
+- task: Acquire 1 DOT
+  type: user
+
+- task: Send DOT to another address
+  type: user
+
+- task: Stake all your DOT
+  type: user
+
+- task: Stake some of your DOT
+  type: user
+
+- task: Unstake some of your DOT
+  type: user
+
+- task: Get your first DOT staking reward
+  type: user
+
+- task: Execute 1 Cross-consensus transaction
+  type: user  
+
+- task: Call a Polkadot contract
+  type: user  
+
+- task: Withdraw tokens to an exchange
+  type: user  
+
+- task: Buy your first pizza with DOT
+  type: user    
+
+- task: Look your address up in a block explorer
+  type: user  
+
+- task: Use a hardware wallet
+  type: user
+
+- task: Register an on-chain identity
+  type: user
+
+- task: Create a custom asset
+  type: user
+
+- task: Bridge a token from another network
+  type: user  
+  
+- task: Bridge an asset within Polkadot
+  type: user    
+
+- task: Interact with your first dApp
+  type: user      
+
+- task: Mint an NFT
+  type: user      
+
+- task: Sell an NFT
+  type: user   
+
+- task: Create an NFT collection
+  type: user  
+  
+- task: Install a Polkadot wallet
+  type: start
+
+- task: Sign an off-chain message
+  type: user        
+
+- task: Use an offline signer to sign a transaction
+  type: user           
+
+- task: Acquire a stablecoin
+  type: user   
+
+- task: Join a staking pool
+  type: user   
+
+- task: Update your nomination preferences
+  type: user   
+
+- task: Transfer a custom asset
+  type: user   
+
+
+- task: Submit an on-chain remark
+  type: user   
+
+- task: Claim testnet tokens
+  type: developer
+
+- task: Run the Polkadot-SDK locally
+  type: developer
+
+- task: Run a solo-chain template locally
+  type: developer
+
+- task: Sign and submit a transaction on the CLI
+  type: developer
+
+- task: Install the Polkadot developer extension
+  type: developer
+
+- task: Deploy a contract on the CLI
+  type: developer
+
+- task: Compile your first Polkadot rollup
+  type: developer
+
+- task: Run a solo-chain locally 
+  type: developer
+
+- task: Run a solo-chain and expose it to the internet
+  type: developer
+
+- task: Write and deploy your first Solidity smart contract
+  type: developer
+
+- task: Write and deploy your first Rust smart contract
+  type: developer
+
+- task: Write and deploy a custom pallet
+  type: developer
+
+- task: Upgrade your rollup's runtime
+  type: developer
+
+- task: Monitor your rollup's status 
+  type: developer
+
+- task: Test your smart contract
+  type: developer
+
+- task: Build a dApp on Polkadot
+  type: developer
+
+- task: Interact with an RPC node (Python, JS, Rust)
+  type: developer
+
+- task: Call XCM from a smart contract
+  type: developer
+
+- task: Submit an OpenGov proposal
+  type: community
+
+- task: Delegate your voting power
+  type: community
+
+- task: Win an OpenGov Proposal
+  type: community
+  link: https://polkadot.js.org
+
+- task: Vote on an OpenGov Proposal
+  type: community
+
+- task: Create a post on the Polkadot forum
+  type: community
+
+- task: Join the Polkadot Discord server
+  type: community
+
+- task: Follow the Polkadot X account
+  type: community
+
+- task: Claim OpenGov payout
+  type: community
+
+- task: Attend AAG with the Kus
+  type: community

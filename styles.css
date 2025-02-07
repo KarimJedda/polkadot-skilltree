@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+:root {
+  --cell-width: 150px;
+  --cell-spacing: 11px;
+  --v-offset: calc(0.32 * var(--cell-width) - 0.5 * var(--cell-spacing));
+  --h-offset: calc(0.25 * var(--cell-width) + 0.25 * var(--cell-spacing));
+  
+  --color-developer: #2691e3;
+  --color-user: #E6007A;
+  --color-community: #47d265;
+  --color-start: #f70000;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  touch-action: none; /* Prevents default touch behaviors */
+}
+
+.honeycomb-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: min-content; /* Prevents squeezing */
+}
+
+.zoom-controls {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zoom-controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight on mobile */
+}
+
+.zoom-controls button:hover {
+  background: rgba(99, 21, 105, 0.768);
+}
+
+.honeycomb {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: max-content;
+  max-width: calc(8 * (var(--cell-width) + var(--cell-spacing))); /* Limit to 7 cells per row */
+  padding: 20px 45px;
+  position: relative;
+  transform-origin: center center;
+}
+
+.honeycomb, .honeycomb *, .honeycomb *:before, .honeycomb *:after {
+  box-sizing: border-box;
+}
+
+.honeycomb-cell {
+  position: relative;
+  display: block;
+  vertical-align: center;
+  width: var(--cell-width);
+  height: calc(1.5 * var(--cell-width));
+  margin: calc(-1 * var(--v-offset)) calc(var(--cell-spacing) / 2) calc(-1 * var(--v-offset)) calc(var(--cell-spacing) / 2);
+  text-decoration: none;
+  overflow: hidden;
+  transform: rotate(-120deg);
+  left: calc(-1 * var(--h-offset));
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.honeycomb-cell[data-link] {
+  cursor: pointer;
+}
+
+.honeycomb-cell:hover {
+  transform: rotate(-120deg) scale(1.05);
+  z-index: 1;
+}
+
+.honeycomb-cell.odd-row {
+  left: var(--h-offset);
+}
+
+.honeycomb-cell-inner {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: rotate(60deg);
+}
+
+.honeycomb-cell__content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(60deg);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  position: relative;
+}
+
+.honeycomb-cell:hover .honeycomb-cell__content {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.honeycomb-cell[data-link]:hover .honeycomb-cell__content::after {
+  color: rgba(255, 255, 255, 0.8);
+  transform: translate(2px, -2px);
+}
+
+.honeycomb-cell__title {
+  position: absolute;
+  text-align: center;
+  width: var(--cell-width);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-weight: 600;
+  font-size: 1em;
+  text-shadow: none;
+  padding: 0 10px;
+  word-wrap: break-word;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.honeycomb-cell[data-type="developer"] .honeycomb-cell__content {
+  background-color: rgba(38, 145, 227, 0.2);
+}
+
+.honeycomb-cell[data-type="developer"] .honeycomb-cell__content:hover {
+  background-color: var(--color-developer);
+  color: white;
+}
+
+.honeycomb-cell[data-type="start"] .honeycomb-cell__content {
+  background-color: rgba(229, 10, 10, 0.2);
+}
+
+.honeycomb-cell[data-type="start"] .honeycomb-cell__content:hover {
+  background-color: var(--color-start);
+}
+
+.honeycomb-cell[data-type="user"] .honeycomb-cell__content {
+  background-color: rgba(230, 0, 122, 0.2);
+}
+
+.honeycomb-cell[data-type="user"] .honeycomb-cell__content:hover {
+  background-color: var(--color-user);
+  color: white;
+}
+
+.honeycomb-cell[data-type="community"] .honeycomb-cell__content {
+  background-color: rgba(71, 210, 101, 0.2);
+}
+
+.honeycomb-cell[data-type="community"] .honeycomb-cell__content:hover {
+  background-color: var(--color-community);
+  color: white;
+}
